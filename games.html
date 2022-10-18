@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Players Page</title>
+    <title>Games Page</title>
 </head>
 <style>
     body{
@@ -20,22 +20,15 @@
         display:flex;
         gap:20px; 
     }
-    #players-list{
-        display: grid;
-        grid-template-columns: auto auto auto auto;
-        justify-content: center;
-        gap:30px;
-        text-align: center;
-        margin-top: 30px;
-    }
-    #search-div , #pagination-btn{
+
+     #showmatch {
         margin: auto;
         width:50%;
         margin-top: 50px;
         text-align: center;
     }
     @media screen and (max-width:500px) and (min-width:100px){
-        #players-list{
+        #showmatch{
         display: grid;
         grid-template-columns: auto ;
         justify-content: space-evenly;
@@ -51,16 +44,17 @@
         </ul>
     </div>
 
-    <div id="search-div">
-        <input type="text" id="name"  placeholder="Enter name...">
-        <button  id="searchbtn" onclick="searchbyname()">Search</button>
+    <div>
+        Start date :<input type="date" id="start">
+        End date :<input type="date" id="end">
+        <button onclick="showmatch()">Match</button>
     </div>
 
-    <div id="players-list"></div>
-    <div id="pagination-btn">
-        <button>Prev</button>
-        <button>Next</button>   
+    <div id="showmatch">
+        <div id="twomatch">
+
+        </div>
     </div>
 </body>
 </html>
-<script src="./index.js"></script>
+<script src="./games.js"></script>
